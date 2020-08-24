@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FTP2</title>
+  <link rel="stylesheet" href="codemirror-lib/docs.css">
+  <link rel="stylesheet" href="codemirror-lib/codemirror.css">
+  <link rel="stylesheet" href="codemirror-lib/mystylesheet.css">
+  <script src="codemirror-lib/codemirror.js"></script>
+  <script src="codemirror-lib/matchbrackets.js"></script>
+  <script src="codemirror-lib/htmlmixed.js"></script>
+  <script src="codemirror-lib/xml.js"></script>
+  <script src="codemirror-lib/javascript.js"></script>
+  <script src="codemirror-lib/css.js"></script>
+  <script src="codemirror-lib/clike.js"></script>
+  <script src="codemirror-lib/php.js"></script>
+</head>
+
+<body>
+  <div id=container1>
+    <form method='post'>
+      <label for="fname">File Name</label>
+      <div id="fname"><input type='text' name='filename'></div>
+    <label for="fname">Code</label>
+    <br>
+      <textarea  name="code" id="code" rows="25" cols="120"> </textarea>
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </div>
+
+
+  <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      lineNumbers: true,
+      matchBrackets: true,
+      mode: "application/x-httpd-php",
+      indentUnit: 4,
+      indentWithTabs: true
+    });
+  </script>
+
+</body>
+</html>
